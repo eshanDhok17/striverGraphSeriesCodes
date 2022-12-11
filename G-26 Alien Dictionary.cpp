@@ -1,5 +1,7 @@
-// Alien Dictionary
-// Toposort
+/* Alien Dictionary
+ * Toposort, ordering not possible when,
+ * Cyclic dependancy and bigger word is before smaller word.
+ */
 
 class Solution{
   private:
