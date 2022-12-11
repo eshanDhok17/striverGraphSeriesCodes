@@ -1,7 +1,7 @@
-// Topological sort
-/*
+/* Topological sort
  * linear ordering of pairs u and v where if there is edge from u to v then u appears before u in that ordering.
  */
+
 class Solution {
   private:
       void dfs(int &node, vector<int> &vis, vector<int> adj[], stack<int> &st) {
