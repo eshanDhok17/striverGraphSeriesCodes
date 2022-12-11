@@ -2,6 +2,7 @@
  * linear ordering of pairs u and v where if there is edge from u to v then u appears before u in that ordering.
  */
 
+// DFS
 class Solution {
   private:
       void dfs(int &node, vector<int> &vis, vector<int> adj[], stack<int> &st) {
@@ -30,4 +31,36 @@ class Solution {
           }
           return res;
       }
+};
+
+// BFS - Kahn's Algorithm
+
+class Solution {
+	public:
+	//Function to return list containing vertices in Topological order. 
+	vector<int> topoSort(int n, vector<int> adj[])  {
+	    vector<int> topo, indegree(n, 0);
+	    for(int i=0; i<n; i++) {
+	        for(int &it : adj[i]) {
+	            indegree[it]++;
+	        }
+	    }
+	    queue<int> q;
+	    for(int i=0; i<n; i++) {
+	        if(indegree[i] == 0) {
+	            q.push(i);
+	        }
+	    }
+	    while(!q.empty()) {
+	        int node = q.front(); q.pop();
+	        topo.push_back(node);
+	        for(int &it : adj[node]) {
+	            indegree[it]--;
+	            if(indegree[it] == 0) {
+	                q.push(it);
+	            }
+	        }
+	    }
+	    return topo;
+	}
 };
