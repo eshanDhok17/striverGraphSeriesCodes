@@ -1,4 +1,4 @@
-// Bi-Partite Graph
+// BiPartite Graph
 
 // BFS
 class Solution {
