@@ -1,4 +1,4 @@
-/* Topological sort
+/* Topological Sort
  * linear ordering of pairs u and v where if there is edge from u to v then u appears before u in that ordering.
  */
 
