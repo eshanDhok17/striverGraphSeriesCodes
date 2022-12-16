@@ -20,10 +20,11 @@ class Solution {
             int node = q.front();
             q.pop();
             for(int &it : adj[node]) {
-              
-                // if distance is less than earlier visited distance,
-                // we save that distance and push that node to explore
-                // more shorter paths
+                /*
+                  if distance is less than earlier visited distance,
+                  we save that distance and push that node to explore
+                  more shorter paths
+              */
                 if(distance[it] > distance[node] + 1) {
                     distance[it] = distance[node] + 1;
                     q.push(it);
