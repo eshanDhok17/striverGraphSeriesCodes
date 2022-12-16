@@ -1,3 +1,12 @@
+/*
+    steps:
+    create graph with edge weights
+    fill stack by doing toposort
+    create distance array and mark source distance as 0
+    empty stack and update distances
+    return distance array
+*/
+
 class Solution {
 private:
     void topoSort(int node, vector<pair<int, int>> adj[], int vis[], stack<int> &st) {
