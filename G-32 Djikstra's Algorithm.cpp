@@ -1,3 +1,4 @@
+// Using Priority Queue
 typedef pair<int, int> pi;
 class Solution {
 	public:
@@ -20,5 +21,35 @@ class Solution {
             }
         }
         return dist;
+    }
+};
+
+
+// Using Set
+class Solution {
+	public:
+	//Function to find the shortest distance of all the vertices from the source vertex S.
+    vector <int> dijkstra(int V, vector<vector<int>> adj[], int S) {
+        // Code here
+        set<pair<int, int>> st;
+        st.insert({0, S});
+        vector<int> d(V, 1e9);
+        d[S] = 0;
+        while(!st.empty()) {
+            auto it = *(st.begin());
+            int dist = it.first, node = it.second;
+            st.erase(it);
+            for(auto &x : adj[node]) {
+                int adjNode = x[0], edgeWeight = x[1];
+                if(dist + edgeWeight < d[adjNode]) {
+                    if(d[adjNode] != 1e9) {
+                        st.erase({d[adjNode], adjNode});
+                    }
+                    d[adjNode] = dist + edgeWeight;
+                    st.insert({d[adjNode], adjNode});
+                }
+            }
+        }
+        return d;
     }
 };
