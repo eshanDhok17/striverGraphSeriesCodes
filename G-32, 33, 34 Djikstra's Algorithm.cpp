@@ -24,6 +24,8 @@ class Solution {
     }
 };
 
+// we can also use queue data structure for djikstra's but it is kind of brute force since we are exploring all nodes regardless of distance,
+// but in priority queue we go greedy in terms of obtaining minimal distance, wich reduces complexity from N^2 to NlogN
 
 // Using Set
 class Solution {
