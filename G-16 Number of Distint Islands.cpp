@@ -1,4 +1,9 @@
-// Number of Distint Islands
+/* Number of Distint Islands
+  in this question we have to give number of distint islands, basically islands which have unique shape.
+  so the tricky part for this question is to find how each island is unique. We do that through usage of geometry.
+  we substract the current row by base row and base column by column to get unique islands. basically start point of island with
+  every point of island and push that into a vector. if vector is duplicate that means we have only one distint island.
+*/
 class Solution {
   public:
   void dfs(int &row, int &col, vector<vector<int>>& grid, vector<vector<bool>>&vis,
