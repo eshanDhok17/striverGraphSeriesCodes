@@ -1,5 +1,4 @@
 // Word Ladder I
-
 class Solution {
 public:
     int ladderLength(string &beginWord, string &endWord, vector<string>& wordList) {
@@ -65,15 +64,13 @@ public:
                 for(string &it : usedOnLevel) {
                     st.erase(it);
                 }
-            }
-            
+            }   
         /*
             next we get latest word of sequence and peform the changes on that
             word charecter by charecter such that we obtain a word from wordList
             to be later used to reach the end word
         */
-            string word = sequence.back();
-            
+            string word = sequence.back(); 
         // check if we got to the end word, if yes we pushback the sequence into our answer
             if(word == endWord) {
             /*
@@ -89,7 +86,6 @@ public:
                     res.push_back(sequence);
                 }
             }
-            
             for(int i=0; i<size(word); ++i) {
             /*
                 store original charecter in order to get back the original word
