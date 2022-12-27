@@ -1,4 +1,8 @@
-// Number of Enclaves
+/* Number of Enclaves
+    approach is such that if we have a 1 on boudary all connected enclaves and that enclave cannot be valid enclaves.
+    so we do a seach algorithm and mark them as invalid. The remaining ones are the ones which cannot be part of invalid
+    enclaves hence are the number of enclaves.
+*/
 class Solution {
 public:
     int numEnclaves(vector<vector<int>>& grid) {
