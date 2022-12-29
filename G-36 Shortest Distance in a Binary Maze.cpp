@@ -1,6 +1,5 @@
-// G-36 Shortest Distance in a Binary Maze
-
 /*
+    G-36 Shortest Distance in a Binary Maze
     Intuition: simple application of Dijkstra's Algorithm using Queue Data Structure since unity edge weights always stack up in increasing order inside queue.
 */
 class Solution {
