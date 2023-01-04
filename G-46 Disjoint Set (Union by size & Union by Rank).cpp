@@ -10,8 +10,8 @@ public:
 		size.resize(n + 1);
 		for(int i = 0; i <= n; i++) {
 			parent[i] = i;
-      size[i] = 1;
-    }
+			size[i] = 1;
+		}
 	}
 	int findPar(int node) {
 		if(node == parent[node]) {
