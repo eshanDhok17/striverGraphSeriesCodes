@@ -1,5 +1,4 @@
 // G-7 Number of Provinces
-
 class Solution {
   private:
     void dfs(int node, vector<int> adjLs[], vector<int> &Vis) {
